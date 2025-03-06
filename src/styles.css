@@ -1,0 +1,126 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures items are centered vertically */
+    padding: 10px 20px;
+    background-color: #333;
+  }
+  
+  /* Logo container */
+  .logo-container {
+    display: flex;
+    align-items: center; /* Vertically center the logo and the text */
+  }
+  
+  /* Style the logo image */
+  .logo {
+    height: 40px;  /* Adjust the height of the logo */
+    width: auto;
+    margin-right: 10px;  /* Space between logo and name */
+  }
+  
+  /* Style the h1 for name */
+  .logo-container h1 {
+    font-size: 30px;  /* Adjust font size for consistency */
+    color: white;
+    margin: 0;
+    display: inline-block; /* Keeps it inline with the logo */
+  }
+  
+  /* Navbar links */
+  nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Navbar links hover effect */
+  nav a:hover {
+    color: #ff6347; /* Or any color you prefer */
+  }
+  
+
+  /* Home Section */
+  .home {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #ffff;
+    color: #000;
+  }
+  
+  /* About Section */
+  .about {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+  }
+  
+  /* Projects */
+  .projects {
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .category-section {
+    margin-top: 30px;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 5px;
+  }
+  
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .project-card {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+  
+  
+  @media (max-width: 900px) { 
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .project-grid {
+      grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+    }
+  }
