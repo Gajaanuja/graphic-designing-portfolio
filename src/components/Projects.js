@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const projectCategories = [
   {
     projects: [
-        { id: 1, image: "/assets/projects/bloom.png" },
+        { id: 1, image: "graphic-portfolio/public/assets/projects/bloom.png" },
         { id: 2, image: "/assets/projects/mega-wizards.jpg" },
         { id: 3, image: "/assets/projects/Arona Digital Solutions.png" },
         { id: 4, image: "/assets/projects/DNL.png" },
