@@ -51,6 +51,6 @@
   "license": "ISC",
   "devDependencies": {
     "gh-pages": "^6.3.0",
-    "typescript": "^5.8.2"
+    "typescript": "^3.2.1"
   }
 }
