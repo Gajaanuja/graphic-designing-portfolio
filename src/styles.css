@@ -159,6 +159,8 @@ nav a:hover:after {
   transition: transform 0.7s ease-in-out;
   height: 100%;
   width: 100%;
+  object-fit: cover; /* Ensures background images fit well */
+
 }
 
 .home .bg-cover:hover {
@@ -522,6 +524,45 @@ nav a:hover:after {
   transform: translateY(0);
 }
 
+/* Hamburger Icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.bar {
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* Menu Styles (hidden by default for mobile) */
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+  background-color: #555;
+}
+
+
 /* Animation classes */
 .animate-fade-in {
   animation: fadeIn 1s ease forwards;
@@ -579,6 +620,10 @@ nav a:hover:after {
 }
 
 @media (max-width: 900px) { 
+  .hamburger {
+    display: block; /* Ensure hamburger is shown on mobile */
+  }
+
   .home .flex {
     flex-direction: column;
   }
@@ -607,6 +652,35 @@ nav a:hover:after {
 }
 
 @media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu.active {
+    transform: translateX(0);
+  }
+
+  .menu a {
+    font-size: 22px;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  
   h1 {
     font-size: 2rem;
   }
@@ -635,6 +709,10 @@ nav a:hover:after {
 }
 
 @media (max-width: 600px) {
+  .hamburger {
+    display: block; /* Ensure hamburger is shown on mobile */
+  }
+
   .project-grid {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -702,4 +780,22 @@ nav a:hover:after {
   .project-card p {
     color: #aaa;
   }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .nav-links {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  }
+  
 }
