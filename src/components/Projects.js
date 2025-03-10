@@ -32,7 +32,7 @@ const Projects = () => {
       animate={{ opacity: 1 }} 
       transition={{ duration: 1 }}
     >
-      <h2>My Work</h2>
+      <h1>My Work</h1>
 
       {projectCategories.map((category, index) => (
         <div key={index} className="category-section">
