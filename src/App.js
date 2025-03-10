@@ -1,17 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./components/Home";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import "./styles.css";
-import logo from "./assets/image.png";  // Import logo
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './components/Home';  // Import Home component
+import About from './components/About';  // Import About component
+import Projects from './components/Projects';  // Import Projects component
+import './styles.css';
+import logo from './assets/image.png';  // Import logo image
 
 const App = () => {
   return (
     <Router>
       <div className="navbar">
         <div className="logo-container">
-          {/* Make the logo a clickable link to the home page */}
           <Link to="/" className="logo-link">
             <img src={logo} alt="Logo" className="logo" />
             <h1>Gajaanuja Megalathan</h1>
@@ -23,6 +22,7 @@ const App = () => {
           <Link to="/projects">Projects</Link>
         </nav>
       </div>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

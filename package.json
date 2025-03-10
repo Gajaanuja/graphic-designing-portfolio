@@ -2,7 +2,6 @@
   "name": "graphic-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Gajaanuja.github.io/graphic-designing-portfolio",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
